@@ -14,3 +14,13 @@ retrive the data
 SELECT * FROM
 WHERE 
 
+SELECT first_name, last_name, salary
+FROM teachers
+ORDER BY salary DESC;
+
+-- Note you can also specify the sort column by
+-- using a number representing its position in the result.
+
+SELECT first_name, last_name, salary
+FROM teachers
+ORDER BY 3 DESC; ## 3 -> salary
