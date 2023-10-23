@@ -23,4 +23,8 @@ WHERE school = 'Myers Middle School'
       AND salary < 40000;  WHERE ... AND ...：这表示必须同时满足两个条件，才会将行包括在结果集中
 
 SELECT *
+FROM teachers
+WHERE last_name = 'Cole'
+      OR last_name = 'Bush';  WHERE ... OR ...：这表示只要满足两个条件中的任意一个，就会将行包括在集中
+      
 
