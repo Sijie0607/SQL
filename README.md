@@ -1,6 +1,11 @@
 # SQL
 SQL practise
-CREAT TABLE ABC
+1.Query --place to write and execute code
+Table --grid of rows amd columns that store data
+2.CREAT TABLE ABC
+text and dates require quotes 
+integer and decimals do not need quotes.
+
 SMALLINT --small integer
 VARCHAR(30)  字符长度
 CONSTRAIN 约束名
@@ -41,4 +46,22 @@ SELECT *
 FROM teachers
 WHERE last_name = 'Cole'
       OR last_name = 'Bush';  WHERE ... OR ...：这表示只要满足两个条件中的任意一个，就会将行包括在
+
+%  -> modulo return to the remainder
+
+Query --place to write and execute code
+Table --grid of rows amd columns that store data
+
+
+15  CREATE TABLE check_constraint_example (
+    user_id bigint GENERATED ALWAYS AS IDENTITY,-->自动填充数字，不需要导入数据在这一列 column constrain
+    user_role text,
+    salary numeric(10,2),
+    CONSTRAINT user_id_key PRIMARY KEY (user_id), --> table constrain , 有两个以上的 Primary key 
+    CONSTRAINT check_role_in_list CHECK (user_role IN('Admin', 'Staff')),
+    CONSTRAINT check_salary_not_below_zero CHECK (salary >= 0)
+);
+INSERT INTO check_constraint_example (user_role)
+VALUES ('admin');
+
       
