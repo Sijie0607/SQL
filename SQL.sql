@@ -27,4 +27,8 @@ FROM teachers
 WHERE last_name = 'Cole'
       OR last_name = 'Bush';  WHERE ... OR ...：这表示只要满足两个条件中的任意一个，就会将行包括在集中
       
+2.CREATE TABLE A(
+
+
+      );
 
