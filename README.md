@@ -6,19 +6,24 @@ Table --grid of rows amd columns that store data
 text and dates require quotes 
 integer and decimals do not need quotes.
 
-SMALLINT --small integer
-VARCHAR(30)  字符长度
-CONSTRAIN 约束名
-PRIMARY KEY 主键
+3 .NUmbers Type
+SMALLINT --small integer-32768--32767
+bigint       -2147483648--2147283647
+integer     -9223372036854775808, +9223372036854775807
 BIGSERIAL,定义一个自增的 64 位整数列，类似于 BIGINT，但会自动生成唯一的序列值。BIGSERIAL 主要用于创建自增的主键列，以确保每行都有唯一的标识符。
 ACS -> Ascending
 DESC -> Descending
-INSERT INTO XXX（，）
+4, text type
+VARCHAR(30)  字符长度
+CONSTRAIN 约束名
+PRIMARY KEY 主键
+
+5.INSERT INTO XXX（，）
 VALUES （，）
-retrive the data
+6.retrive the data
 SELECT * FROM
 WHERE 
---combine select from with other syntax
+7.--combine select from with other syntax
 SELECT first_name, last_name, salary
 FROM teachers
 ORDER BY salary DESC;
@@ -28,7 +33,7 @@ ORDER BY salary DESC;
 
 SELECT first_name, last_name, salary
 FROM teachers
-ORDER BY 3 DESC; ## 3 -> salary
+ORDER BY 3 DESC; (## 3 -> salary)
 
 WHERE first_name LIKE 'sam%'：这部分是筛选条件，
 WHERE 子句允许你定义条件，只有满足条件的行将包含在查询结果中。在这里，LIKE 是一个用于模糊匹配的操作符，它允许你搜索具有特定模式的字符串。
